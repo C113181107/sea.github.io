@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台灣海邊與生態</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台灣海灘與生態查詢</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <h1>選擇台灣地區，查看海邊與生態資訊</h1>
-
+  <h1>台灣海灘與生態查詢</h1>
+  <div>
     <label for="region-select">選擇地區:</label>
     <select id="region-select">
-        <option value="taipei">台北</option>
-        <option value="taichung">台中</option>
-        <option value="kaohsiung">高雄</option>
-        <option value="pingtung">屏東</option>
+      <option value="">選擇地區</option>
+      <option value="taipei">台北</option>
+      <option value="taichung">台中</option>
+      <option value="kaohsiung">高雄</option>
+      <option value="pingtung">屏東</option>
     </select>
+    <button id="query-btn">查詢</button>
+  </div>
+  
+  <div id="result">
+    <div id="beach-info"></div>
+    <div id="ecology-info"></div>
+  </div>
 
-    <div id="beach-info">
-        <!-- 顯示海邊名稱 -->
-    </div>
-
-    <div id="ecology-info">
-        <!-- 顯示生態資訊 -->
-    </div>
-
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
