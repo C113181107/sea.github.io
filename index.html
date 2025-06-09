@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>台灣海灘與生態查詢</title>
+  <title>台灣海邊與生態查詢</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>台灣海灘與生態查詢</h1>
-  <div>
-    <label for="region-select">選擇地區:</label>
-    <select id="region-select">
-      <option value="">選擇地區</option>
-      <option value="taipei">台北</option>
-      <option value="taichung">台中</option>
-      <option value="kaohsiung">高雄</option>
-      <option value="pingtung">屏東</option>
-    </select>
-    <button id="query-btn">查詢</button>
-  </div>
+  <h1>選擇台灣區域</h1>
+  
+  <select id="areaSelect">
+    <option value="台北市">台北市</option>
+    <option value="高雄市">高雄市</option>
+    <!-- 可以加入更多的選項 -->
+  </select>
+  
+  <button id="searchBtn">查詢</button>
   
   <div id="result">
-    <div id="beach-info"></div>
-    <div id="ecology-info"></div>
+    <h2>海邊：</h2>
+    <ul id="beaches"></ul>
+    
+    <h2>生態：</h2>
+    <ul id="ecology"></ul>
   </div>
 
   <script src="app.js"></script>
