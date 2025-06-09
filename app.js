@@ -1,5 +1,10 @@
-document.getElementById("region-select").addEventListener("change", function() {
-    const region = this.value;
+document.getElementById("query-btn").addEventListener("click", function() {
+    const region = document.getElementById("region-select").value;
+
+    if (!region) {
+        alert("請選擇一個地區！");
+        return;
+    }
 
     // 使用 fetch 載入 JSON 資料
     fetch('data.json')
