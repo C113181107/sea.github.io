@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>沙灘生物選擇器</title>
+    <title>台灣海邊選擇</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>選擇地區來了解沙灘與生物</h1>
-        
-        <label for="region-select">選擇地區：</label>
-        <select id="region-select">
-            <option value="taiwan">台灣</option>
-            <option value="thailand">泰國</option>
-            <option value="hawaii">夏威夷</option>
-        </select>
-        
-        <div id="beach-info">
-            <!-- 沙灘資訊會顯示在這裡 -->
-        </div>
-        
-        <div id="creature-info">
-            <!-- 生物資訊會顯示在這裡 -->
-        </div>
+
+    <h1>選擇台灣的地區來查看海邊資訊</h1>
+
+    <label for="region-select">選擇地區:</label>
+    <select id="region-select">
+        <option value="taipei">台北</option>
+        <option value="taichung">台中</option>
+        <option value="kaohsiung">高雄</option>
+        <option value="pingtung">屏東</option>
+    </select>
+
+    <div id="beach-info">
+        <!-- 這裡會顯示海邊的資訊 -->
+    </div>
+
+    <div id="description">
+        <!-- 這裡會顯示海邊的描述 -->
     </div>
 
     <script src="app.js"></script>
