@@ -1,32 +1,34 @@
-document.getElementById("query-btn").addEventListener("click", function() {
-    const region = document.getElementById("region-select").value;
+const areaData = {
+  "台北市": {
+    "海邊": ["淡水海灘", "金山海岸"],
+    "生態": ["海岸植物", "海鳥", "珊瑚"]
+  },
+  "高雄市": {
+    "海邊": ["蓮池潭", "旗津海灘"],
+    "生態": ["海豚", "珊瑚礁", "海藻"]
+  }
+  // 這裡可以加更多的區域和資料
+};
 
-    if (!region) {
-        alert("請選擇一個地區！");
-        return;
-    }
+document.getElementById("searchBtn").addEventListener("click", function() {
+  const selectedArea = document.getElementById("areaSelect").value;
+  const result = areaData[selectedArea];
 
-    // 使用 fetch 載入 JSON 資料
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            if (data[region]) {
-                const beach = data[region].beach;
-                const ecology = data[region].ecology.join(", ");
+  // 顯示海邊
+  const beachesList = document.getElementById("beaches");
+  beachesList.innerHTML = "";
+  result["海邊"].forEach(beach => {
+    const listItem = document.createElement("li");
+    listItem.textContent = beach;
+    beachesList.appendChild(listItem);
+  });
 
-                // 顯示海邊名稱
-                document.getElementById("beach-info").innerHTML = `<h2>海邊: ${beach}</h2>`;
-                
-                // 顯示生態資訊
-                document.getElementById("ecology-info").innerHTML = `<p>常見生態: ${ecology}</p>`;
-            } else {
-                document.getElementById("beach-info").innerHTML = "<h2>未找到該地區的海邊資訊</h2>";
-                document.getElementById("ecology-info").innerHTML = "<p>請選擇其他地區。</p>";
-            }
-        })
-        .catch(error => {
-            console.error('資料載入錯誤:', error);
-            document.getElementById("beach-info").innerHTML = "<h2>資料載入失敗</h2>";
-            document.getElementById("ecology-info").innerHTML = "<p>請稍後再試。</p>";
-        });
+  // 顯示生態
+  const ecologyList = document.getElementById("ecology");
+  ecologyList.innerHTML = "";
+  result["生態"].forEach(ecology => {
+    const listItem = document.createElement("li");
+    listItem.textContent = ecology;
+    ecologyList.appendChild(listItem);
+  });
 });
