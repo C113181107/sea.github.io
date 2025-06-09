@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>台灣海邊與生態查詢</title>
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- 引入 Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+  <style>
+    /* 設定地圖容器大小 */
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <h1>選擇台灣區域</h1>
@@ -17,10 +28,11 @@
     <option value="屏東縣">屏東縣</option>
     <option value="澎湖縣">澎湖縣</option>
     <option value="金門縣">金門縣</option>
-    </select>
+  </select>
   
   <button id="searchBtn">查詢</button>
-  
+
+  <!-- 顯示海邊與生態 -->
   <div id="result">
     <h2>海邊：</h2>
     <ul id="beaches"></ul>
@@ -28,6 +40,9 @@
     <h2>生態：</h2>
     <ul id="ecology"></ul>
   </div>
+
+  <!-- 顯示地圖 -->
+  <div id="map"></div>
 
   <script src="app.js"></script>
 </body>
