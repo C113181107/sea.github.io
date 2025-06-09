@@ -1,14 +1,18 @@
 {
-  "taiwan": {
-    "beach": "墾丁沙灘",
-    "creatures": ["海龜", "珊瑚", "海星"]
+  "taipei": {
+    "beach": "淡水海灘",
+    "description": "淡水海灘是台北市著名的休閒海邊，可以欣賞美麗的夕陽。"
   },
-  "thailand": {
-    "beach": "普吉島沙灘",
-    "creatures": ["水母", "海豚", "熱帶魚"]
+  "taichung": {
+    "beach": "梧棲海灘",
+    "description": "梧棲海灘擁有平緩的沙灘，非常適合家庭遊玩。"
   },
-  "hawaii": {
-    "beach": "瓦胡島沙灘",
-    "creatures": ["鯊魚", "海龜", "海豚"]
+  "kaohsiung": {
+    "beach": "蓮池潭海灘",
+    "description": "蓮池潭海灘擁有清澈的水質，是許多水上活動愛好者的最愛。"
+  },
+  "pingtung": {
+    "beach": "墾丁海灘",
+    "description": "墾丁海灘是台灣最著名的海灘之一，擁有美麗的沙灘和清澈的海水。"
   }
 }
