@@ -1,0 +1,14 @@
+{
+  "taiwan": {
+    "beach": "墾丁沙灘",
+    "creatures": ["海龜", "珊瑚", "海星"]
+  },
+  "thailand": {
+    "beach": "普吉島沙灘",
+    "creatures": ["水母", "海豚", "熱帶魚"]
+  },
+  "hawaii": {
+    "beach": "瓦胡島沙灘",
+    "creatures": ["鯊魚", "海龜", "海豚"]
+  }
+}
