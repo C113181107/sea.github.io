@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const form = document.getElementById('quizForm');
-  form.innerHTML = '';  // 先清空，避免重複題目跟按鈕
+  form.innerHTML = '';  // 清空避免重複產生
 
   questions.forEach(q => {
     const div = document.createElement('div');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.appendChild(div);
   });
 
-  // 確認有沒有按鈕，沒有才新增
+  // 加入提交按鈕，避免重複新增
   if (!form.querySelector('button[type="submit"]')) {
     const submitBtn = document.createElement('button');
     submitBtn.textContent = '提交';
@@ -48,15 +48,19 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', e => {
     e.preventDefault();
     let score = 0;
+    let resultHTML = '';
 
     questions.forEach(q => {
       const selected = form.elements[q.id].value;
       if (selected === q.answer) {
         score++;
+        resultHTML += `<p>題目：${q.question} <br> 你的答案：${selected} <span style="color:green;">（答對）</span></p>`;
+      } else {
+        resultHTML += `<p>題目：${q.question} <br> 你的答案：${selected} <span style="color:red;">（答錯）</span> <br> 正確答案：${q.answer}</p>`;
       }
     });
 
-    document.getElementById('result').innerHTML =
-      `<h2>你的得分是：${score} / ${questions.length}</h2>`;
+    resultHTML = `<h2>你的得分是：${score} / ${questions.length}</h2>` + resultHTML;
+    document.getElementById('result').innerHTML = resultHTML;
   });
 });
