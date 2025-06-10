@@ -22,6 +22,7 @@ button {
   background-color: #007bff;
   color: white;
   cursor: pointer;
+  border: none;
 }
 
 button:hover {
@@ -51,4 +52,39 @@ ul li {
   background-color: #e9ecef;
   margin: 5px 0;
   border-radius: 5px;
+}
+
+/* 小測驗專用 */
+
+form div {
+  margin: 20px auto;
+  width: 80%;
+  text-align: left;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+  display: block;
+  margin: 5px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+form button[type="submit"] {
+  margin-top: 15px;
+  width: 100%;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #218838;
 }
